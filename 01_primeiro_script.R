@@ -76,3 +76,9 @@ hist <- model %>% fit(
   validation_steps = validation_images$n %/% batch_size,
   verbose = 2
 )
+
+validation_steps = length(validation_images)/batch_size
+
+model %>% evaluate(validation_images, 
+                             steps = validation_images$n, epochs = epochs, steps_per_epoch = validation_images %/% batch_size)
+
