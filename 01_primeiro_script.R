@@ -55,7 +55,7 @@ model_function <- function(learning_rate = 0.001,
   
   model %>% compile(
     loss = "categorical_crossentropy",
-    optimizer = optimizer_adam(lr = learning_rate),
+    optimizer = optimizer_adam(learning_rate = 0.001),
     metrics = "accuracy"
   )
   
@@ -64,5 +64,15 @@ model_function <- function(learning_rate = 0.001,
 }
 
 model <- model_function()
+model
 
-
+batch_size <- 32
+epochs <- 6
+hist <- model %>% fit(
+  train_images,
+  steps_per_epoch = train_images$n %/% batch_size, 
+  epochs = epochs, 
+  validation_data = validation_images,
+  validation_steps = validation_images$n %/% batch_size,
+  verbose = 2
+)
