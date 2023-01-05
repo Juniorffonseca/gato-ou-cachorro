@@ -37,7 +37,7 @@ validation_images <- flow_images_from_directory(path_train,
 
 
 mod_base <- application_xception(weights = 'imagenet', 
-                                 include_top = FALSE, input_shape = c(71, 71, 3))
+                                 include_top = FALSE, input_shape = c(224, 224, 3))
 freeze_weights(mod_base) 
 
 model_function <- function(learning_rate = 0.001, 
@@ -67,7 +67,7 @@ model <- model_function()
 model
 
 batch_size <- 32
-epochs <- 6
+epochs <- 3
 hist <- model %>% fit(
   train_images,
   steps_per_epoch = train_images$n %/% batch_size, 
@@ -77,8 +77,5 @@ hist <- model %>% fit(
   verbose = 2
 )
 
-validation_steps = length(validation_images)/batch_size
-
-model %>% evaluate(validation_images, 
-                             steps = validation_images$n, epochs = epochs, steps_per_epoch = validation_images %/% batch_size)
+model %>% evaluate(validation_images)
 
