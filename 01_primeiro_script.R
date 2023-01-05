@@ -11,8 +11,8 @@ output_n <- length(label_list)
 save(label_list, file="label_list.R")
 
 # Tamanho das imagens
-width <- 64
-height <- 64
+width <- 224
+height <- 224
 target_size <- c(width, height)
 rgb <- 3 #color channels
 
