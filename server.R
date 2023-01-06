@@ -27,7 +27,15 @@ server <- function(input, output) {
                         target_size = c(224, 224))
     
     output$txtout <- renderText({
-      paste(previsaoCatDog())
+      'teste'
+      if (input$submitbutton>0) { 
+      'testeee'
+      #previsaoCatDog()
+      }
+      else
+      {
+        'A rede neural está pronta para identificar se é gato ou cachorro.'
+      }
     })
   })
 }
