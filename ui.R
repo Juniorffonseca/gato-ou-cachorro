@@ -8,9 +8,9 @@ if (interactive()) {
         checkboxInput("header", "Header", TRUE)
       ),
       mainPanel(
-        tableOutput("contents")
+        h5("Resultado:"),
+        verbatimTextOutput('txtout')
       )
     )
   )
-  
-  
+}
