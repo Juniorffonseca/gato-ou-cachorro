@@ -25,18 +25,17 @@ server <- function(input, output) {
     
     image <- image_load(file$datapath,
                         target_size = c(224, 224))
-    
-    output$txtout <- renderText({
-      'teste'
-      if (input$submitbutton>0) { 
-      'testeee'
-      #previsaoCatDog()
-      }
-      else
-      {
-        'A rede neural está pronta para identificar se é gato ou cachorro.'
-      }
-    })
   })
+  
+  output$txtout <- renderText({
+    if (input$submitbutton>0) { 
+      paste(previsaoCatDog())
+    }
+    else
+    {
+      'A rede neural está pronta para identificar se é gato ou cachorro.'
+    }
+  })
+  
 }
 
