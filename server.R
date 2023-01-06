@@ -26,7 +26,7 @@ server <- function(input, output) {
     req(input$input_image)
     
     if(as.numeric(substr(previsaoCatDog()[1,2],1,4)) >= 30){return(NULL)}
-    warntext <- "Warning: I am not sure about this image!"
+    warntext <- "Não tenho certeza sobre essa imagem."
     warntext
   })
   

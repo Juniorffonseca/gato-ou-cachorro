@@ -1,14 +1,13 @@
 name: Cats_Recognition
-title: Cats_Recognition
+title:
 username:
 account: jrff
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7982935
-bundleId: 6702905
+bundleId: 6704612
 url: https://jrff.shinyapps.io/Cats_Recognition/
-when: 1672979547.39357
-lastSyncTime: 1672979547.39358
+when: 1673021273.77308
+lastSyncTime: 1673021273.77309
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: dados_brutos

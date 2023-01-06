@@ -5,6 +5,7 @@ library(rsconnect)
 library(keras)
 library(tensorflow)
 library(tidyverse)
+library(reticulate)
 
 # Sources ----------------------------------------------------------------------
 source('ui.R')
