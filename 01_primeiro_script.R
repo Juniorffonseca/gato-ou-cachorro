@@ -77,5 +77,24 @@ hist <- model %>% fit(
   verbose = 2
 )
 
+model %>% save_model_tf("cat_dog_mod")
+
 model %>% evaluate(validation_images)
 
+
+save(model, file = 'model.rda')
+
+# Testando em imagens aleatórias
+
+test_image <- image_load("teste.jpeg",
+                         target_size = target_size)
+test_image2 <- image_load('teste2.jpeg',
+                           target_size = target_size)
+x <- image_to_array(test_image)
+x <- array_reshape(x, c(1, dim(x)))
+x <- x/255
+y <- image_to_array(test_image2)
+y <- array_reshape(y, c(1, dim(y)))
+y <- y/255
+pred <- model %>% predict(x)
+pred <- model %>% predict(y)
