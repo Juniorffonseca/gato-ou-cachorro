@@ -1,6 +1,6 @@
 # UI
 
-ui <- dashboardPage(
+ui <- dashboardPage(title='Gato ou Cachorro?',
   skin="green",
   
   #(1) Header
@@ -33,9 +33,9 @@ ui <- dashboardPage(
     tags$br(),
     
     fluidRow(
-      column(h4("Imagem:"),imageOutput("output_image"), width=3),
+      column(h4("Imagem:"),imageOutput("output_image"), width=6),
       column(h4("Resultado:"),tags$br(),textOutput("warntext",), tags$br(),
-             tags$p("Nessa imagem provavelmente temos um:"),tableOutput("text"),width=3)
+             tags$p("Nessa imagem provavelmente temos um:"),tableOutput("text"),width=6)
     ),tags$br()
     
   ))

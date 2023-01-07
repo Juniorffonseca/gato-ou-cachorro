@@ -1,0 +1,13 @@
+name: gato_ou_cachorro
+title: gato_ou_cachorro
+username:
+account: junin
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7987193
+bundleId: 6706064
+url: https://junin.shinyapps.io/gato_ou_cachorro/
+when: 1673049605.99481
+lastSyncTime: 1673049605.99482
+asMultiple: FALSE
+asStatic: FALSE
