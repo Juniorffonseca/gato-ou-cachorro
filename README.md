@@ -6,4 +6,4 @@ O objetivo desse script é fazer um algoritmo que seja capaz de responder corret
 
 App link: 
 
-## [Gato ou Cachorro] (https://jrff.shinyapps.io/Cats_Recognition/)
+## [Gato ou Cachorro](https://jrff.shinyapps.io/Cats_Recognition/)
